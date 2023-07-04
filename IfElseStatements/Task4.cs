@@ -4,60 +4,84 @@
     {
         public static int DoSomething(bool b1, bool b2, bool b3, bool b4)
         {
-            int result = 0;
-
             if (!b1)
             {
-                if (!b2 || !b3)
+                if (!b2)
                 {
-                    if (!b4)
+                    if (!b3)
                     {
-                        result = 1;
+                        if (!b4)
+                        {
+                            return 5;
+                        }
+                        else
+                        {
+                            return 8;
+                        }
                     }
                     else
                     {
-                        result = 2;
+                        if (!b4)
+                        {
+                            return 6;
+                        }
+                        else
+                        {
+                            return 7;
+                        }
                     }
                 }
                 else
                 {
-                    if (!b4)
+                    if (!b3)
                     {
-                        result = 3;
+                        return 5;
                     }
                     else
                     {
-                        result = 4;
+                        return 6;
                     }
                 }
             }
             else
             {
-                if (!b2 || b4)
+                if (!b2)
                 {
                     if (!b3)
                     {
-                        result = 5;
+                        if (!b4)
+                        {
+                            return 2;
+                        }
+                        else
+                        {
+                            return 1;
+                        }
                     }
                     else
                     {
-                        result = 6;
+                        if (!b4)
+                        {
+                            return 3;
+                        }
+                        else
+                        {
+                            return 4;
+                        }
                     }
                 }
                 else
                 {
-                    if (!b3)
+                    if (!b4)
                     {
-                        result = 7;
+                        return 2;
                     }
                     else
                     {
-                        result = 8;
+                        return 1;
                     }
                 }
             }
-
-            return result;
         }
     }
 }
